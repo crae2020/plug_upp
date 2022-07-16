@@ -11,7 +11,7 @@ require ("../controllers/cart_controller.php");
 require("../controllers/customer_controller.php");
 session_start();
 
-if (logged_in()) {
+
 
 $cid = $_SESSION['customer_id'];
 
@@ -389,11 +389,7 @@ paymentForm.addEventListener("submit", payWithPaystack, false); */
 			<p class="copy-right-w3ls-agileits">&copy 2018 Plug Upp Shoes. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 		</div>
 	<!-- //footer -->
-	<?php }
-            else{
-                header("Location: ../index.php");
-            }
-        ?>
+	  
    <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- js -->
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>

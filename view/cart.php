@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  require ("../controllers/cart_controller.php");
  session_start();
 
- if (logged_in()) {
+ 
 
  $cid = $_SESSION['customer_id'];
  
@@ -81,15 +81,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
 
 					<nav>
-						<ul>
+                    <ul>
 							<li><a href="../index.php" class="active">Home</a></li>
 							<!-- <li><a href="view/about.php">About</a></li>
 							<li><a href="view/404.php">Team</a></li>-->
 							<li><a href="view/shop.php">Shop Now</a></li>
 							<li><a href="view/contact.php">Contact</a></li>
-							<li><a href="login/register.php">Signup</a></li>
-							<li><a href="login/login.php">Login</a></li>
-							<li><a href="login/logout.php">Logout</a></li>
+							<li><a href="../login/register.php">Signup</a></li>
+							<li><a href="../login/login.php">Login</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -431,11 +430,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p class="copy-right-w3ls-agileits">&copy 2018 Plug Upp Shoes. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 		</div>
 	<!-- //footer -->
-	<?php }
-            else{
-                header("Location: ../index.php");
-            }
-        ?>
     <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- js -->
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
