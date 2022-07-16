@@ -14,6 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     /* if (!(is_user_signed_in() && is_session_user_admin())){
         header("Location: ../web/login.php");
     } */
+	require("../controllers/cart_controller.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -260,6 +261,31 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<tbody>
 									<script src="../js/"></script>
 									<?php
+
+									$orders = admin_order_details_ctrl();
+									
+									if($orders){
+										foreach ($orders as $item){
+
+											$user = $item['customer_name'];
+											$order = $item['order_id'];
+											$invoice = $item['invoice_no'];
+											$amt = $item['amt'];
+											$date = $item['payment_date'];
+											$status = $item['order_status'];
+
+											echo "<tr>";
+											echo "<td>$user</td>";
+											echo "<td>$order</td>";
+											echo "<td>$invoice</td>";
+											echo "<td>$amt</td>";
+											echo "<td>$date</td>";
+											echo "<td>  $status</td>";
+
+											echo "</tr>";
+											
+										}
+									}
 									/* $orders = get_all_orders_ctrl();
 									if ($orders) {
 										foreach ($orders as $item) {

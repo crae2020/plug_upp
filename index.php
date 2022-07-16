@@ -7,6 +7,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <?php
 	require("settings/core.php");
+	// if (logged_in() && admin_user()) {
+		
+	
 ?>
 
 <!DOCTYPE html>
@@ -452,6 +455,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	</div>
+	
 	<!-- //footer -->
     <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- js -->

@@ -83,6 +83,12 @@ function count_one_cart_ctrl($cid){
     
     }
 
+  function admin_order_details_ctrl(){
+    $data = new cart_class();
+
+    return $data -> admin_order_details();
+  }
+
 
 /* UPDATE */
 

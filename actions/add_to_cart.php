@@ -17,6 +17,7 @@ $check_duplicate = duplicate_all_cart_ctrl($pid, $cid);
 
 if (count($check_duplicate) == 0){
     $cart_check = add_cart_ctrl($pid, $ip_address, $cid); 
+    // print_r ($cart_check);
     if ($cart_check) {
         echo "Added to cart successfully";
         header('Location: ../view/shop.php');

@@ -17,7 +17,7 @@ class cart_class extends db_connection
 function insert_cart($p_id, $ip_add, $c_id){
 
     $sql = "INSERT INTO `cart`(`p_id`, `ip_add`, `c_id`, `qty`) 
-            VALUES ('$p_id', '$ip_add', '$c_id', '1')";
+            VALUES ('$p_id', '$ip_add', '$c_id', 1)";
 
     return $this -> db_query($sql);
 }
@@ -129,16 +129,12 @@ function insert_order_details($oid, $pid, $qty){
     }
 
     /* ADMIN QUERIES */
-  /*   function admin_order_details($cid){
-        $sql = "SELECT customer_name
-        FROM customers
-        JOIN orders.order_id, orders.invoice_no, orders.order_date, orders.status
-        ON customers.customer_id = orders.customer_id
-        JOIN payment.amt
-        ON payment.customer_id = orders.customer_id"
-        
-        
-    } */
+    function admin_order_details(){
+       $sql = "SELECT * from customer INNER JOIN orders on customer.customer_id = orders.order_id 
+       INNER JOIN payment on orders.order_id = payment.order_id";
+
+       return $this -> db_fetch_all($sql);
+    }
    
 
 	//--UPDATE--//

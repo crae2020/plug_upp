@@ -18,13 +18,13 @@ if ($login_check == null) {
 }
 
 elseif (session_login ($login_check['customer_id'], $login_check['user_role'] == 1)) {
-    header("Location: ../index.php");
+    header("Location: ../view/shop.php");
 	
 }
 
 else {
 	// echo "login success";
 	session_login ($login_check['customer_id'], $login_check['user_role']);
-	header("Location: ../index.php");
+	header("Location: ../view/shop.php");
 }
 ?>

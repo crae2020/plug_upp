@@ -182,7 +182,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="shoe single-item single_page_b">
 					
 						<form action="../actions/add_to_cart.php" method="GET">
-							<input type="hidden" id="pid" value="<?php echo $product['product_Id'] ?>">
+							<input type="hidden" name="pid" value="<?php echo $product['product_id'] ?>">
 						
 							<input type="submit" name="submit" value="Add to cart" class="button add">
 
