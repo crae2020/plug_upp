@@ -58,14 +58,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
 
 					<nav>
-					<ul>
+						<ul>
 							<li><a href="../index.php" class="active">Home</a></li>
 							<!-- <li><a href="view/about.php">About</a></li>
 							<li><a href="view/404.php">Team</a></li>-->
 							<li><a href="view/shop.php">Shop Now</a></li>
 							<li><a href="view/contact.php">Contact</a></li>
-							<li><a href="../login/register.php">Signup</a></li>
-							<li><a href="../login/login.php">Login</a></li>
+							<li><a href="login/register.php">Signup</a></li>
+							<li><a href="login/login.php">Login</a></li>
+							<li><a href="login/logout.php">Logout</a></li>
 						</ul>
 					</nav>
 				</div>
