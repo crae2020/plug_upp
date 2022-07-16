@@ -70,11 +70,6 @@ class customer_class extends db_connection
 		return $this->db_fetch_all($sql);
 	}
 
-	function get_admin_orders(){
-		$sql = "SELECT * from customer INNER JOIN orders on customer.customer_id = orders.order_id 
-		INNER JOIN payment on orders.order_id = payment.order_id;"
-	}
-	
 
 
 	//--UPDATE--//

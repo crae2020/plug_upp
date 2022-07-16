@@ -6,15 +6,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <?php
 //Getting neccessary files
-  /*   require_once("../controllers/order_controller.php");
-    require_once("../controllers/user_controller.php");
-    require_once("../settings/core.php");
- */
-    //Enforcing admin only success
-    /* if (!(is_user_signed_in() && is_session_user_admin())){
-        header("Location: ../web/login.php");
-    } */
+
+   
 	require("../controllers/cart_controller.php");
+	require("../settings/core.php");
+
+	if (logged_in() && admin_user()) {
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -334,6 +331,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		<div class="footer">
 		   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
 	   </div>
+	   <?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
         <!--//footer-->
 	</div>
 

@@ -6,9 +6,7 @@ require("../settings/core.php");
 
 //Enforcing admin only success
 
-// if(!admin_user()){
-// 	header("Location:../index.php");
-// }
+if (logged_in() && admin_user()) {
 
 $pid = $_GET['pid'];
 $product_detail = select_one_product_ctrl($pid);
@@ -409,7 +407,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--//footer-->
 	</div>
-
+	<?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
 	<!-- side nav js -->
 	<script src='js/SidebarNav.min.js' type='text/javascript'></script>
 	<script>

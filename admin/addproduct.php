@@ -10,9 +10,7 @@ require("../controllers/product_controller.php");
 require("../settings/core.php");
 
 //Enforcing admin only success
-// if(!admin_user()){
-// 	header("Location:../index.php");
-// }
+if (logged_in() && admin_user()) {
 
 ?>
 <!DOCTYPE HTML>
@@ -455,5 +453,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 </body>
+<?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
 
 </html>

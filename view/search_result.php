@@ -15,6 +15,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  require ("../controllers/cart_controller.php");
  session_start();
 
+ if (logged_in()) {
+
  $cid = $_SESSION['customer_id'];
  
  $count_cart = count_cart_ctrl($cid);
@@ -445,6 +447,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	</div>
 	<!-- //footer -->
+	<?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
 	<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- js -->
 	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>

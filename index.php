@@ -7,7 +7,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <?php
 	require("settings/core.php");
-	// if (logged_in() && admin_user()) {
 		
 	
 ?>

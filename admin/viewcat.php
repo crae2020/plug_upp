@@ -10,10 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     require_once("../controllers/product_controller.php");
     require_once("../settings/core.php");
 
-    //Enforcing admin only success
-	// if(!admin_user()){
-	// 	header("Location:../index.php");
-	// }
+	if (logged_in() && admin_user()) {
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -334,7 +331,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		   <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>		</div>
         <!--//footer-->
 	</div>
-
+	<?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
 	<!-- side nav js -->
 	<script src='js/SidebarNav.min.js' type='text/javascript'></script>
 	<script>

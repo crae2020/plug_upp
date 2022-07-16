@@ -12,9 +12,7 @@ require("../settings/core.php");
 
 //Enforcing admin only success
 
-// if(!admin_user()){
-// 	header("Location:../index.php");
-// }
+if (logged_in() && admin_user()) {
 
 $bid = $_GET['bid'];
 $brand_detail = select_one_brand_ctrl($bid);
@@ -397,5 +395,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 </body>
+<?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
 
 </html>

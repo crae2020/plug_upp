@@ -12,9 +12,7 @@ require("../settings/core.php");
 
 //Enforcing admin only success
 
-// if(!admin_user()){
-// 	header("Location:..//../index.php");
-// }
+if (logged_in() && admin_user()) {
 
 $cid = $_GET['cid'];
 $cat_detail = select_one_category_ctrl($cid);
@@ -309,6 +307,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
+	<?php }
+            else{
+                header("Location: ../index.php");
+            }
+        ?>
 	<!--footer-->
 	<div class="footer">
 		<p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
